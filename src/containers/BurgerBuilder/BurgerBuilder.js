@@ -61,6 +61,17 @@ class BurgerBuilder extends Component {
     purchaseContinueHandler = () => {
         // TODO: Send order to the server
         alert('Purchase completed successfully');
+        this.setState({
+            ingredients: {
+                meat: 0,
+                cheese: 0,
+                bacon: 0,
+                salad: 0
+            },
+            totalPrice: 0,
+            purchasable: false,
+            purchasing: false
+        });
     }
 
     render() {
